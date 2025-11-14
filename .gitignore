@@ -1,0 +1,212 @@
+# ===================================
+# EKS MCP Project - .gitignore
+# ===================================
+
+# ===================================
+# 🔐 민감한 정보 (절대 커밋 금지!)
+# ===================================
+
+# AWS 자격 증명
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+.aws/
+credentials
+.aws-credentials
+aws-credentials.json
+
+# 환경 변수 및 설정 파일
+.env
+.env.*
+.envrc
+*.env
+*.local
+.secrets
+secrets.yaml
+secrets.yml
+
+# Kubernetes 설정
+kubeconfig
+kubeconfig.*
+.kube/config
+*.kubeconfig
+
+# SSH 키
+id_rsa
+id_rsa.*
+id_dsa
+id_ecdsa
+id_ed25519
+*.ppk
+
+# 토큰 및 비밀번호
+*token*
+*secret*
+*password*
+.token
+.secret
+
+# ===================================
+# 💻 개발 환경
+# ===================================
+
+# Cursor / Claude Code 로컬 설정
+.claude/
+.cursor/
+*.local.json
+
+# IDE 설정 (개인화된 설정)
+.vscode/settings.json
+.vscode/launch.json
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries
+.idea/shelf
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.nfs*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===================================
+# 🐍 Python 관련
+# ===================================
+
+# Python 가상환경
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+virtualenv/
+
+# Python 컴파일 파일
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# ===================================
+# 🐳 컨테이너 관련
+# ===================================
+
+# Docker 로컬 빌드
+*.tar
+*.tar.gz
+
+# Podman 설정 (로컬)
+.podman/
+
+# ===================================
+# 📦 Node.js (만약 사용한다면)
+# ===================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm/
+
+# ===================================
+# 🔧 기타 빌드 파일
+# ===================================
+
+# 로그 파일
+*.log
+logs/
+*.log.*
+
+# 임시 파일
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# 백업 파일
+*.backup
+*.old
+
+# 압축 파일 (필요하면 제거)
+*.zip
+*.rar
+*.7z
+
+# ===================================
+# ✅ 커밋해야 하는 파일들
+# ===================================
+
+# 가이드 문서 (Public)
+# *.md
+
+# Kubernetes YAML 예제 (Public)
+# *.yaml
+# *.yml
+
+# Terraform 예제 (Public, 단 .tfvars는 제외)
+# *.tf
+
+# ===================================
+# 🚫 Terraform 민감 파일
+# ===================================
+
+# Terraform 상태 파일 (민감!)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Terraform 변수 (민감!)
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+override.tf
+override.tf.json
+
+# ===================================
+# 📝 참고사항
+# ===================================
+#
+# Public 리포지토리에 올리기 전 체크리스트:
+#
+# 1. AWS Access Key / Secret Key 제거 확인
+# 2. kubeconfig 파일 제거 확인
+# 3. .env 파일 제거 확인
+# 4. 개인 이메일/이름 제거 확인
+# 5. Private IP/도메인 제거 확인
+# 6. 실제 계정 ID 제거 확인
+#
+# 안전한 예제 사용:
+# - AWS Account ID: 123456789012 (예시)
+# - Region: ap-northeast-2 (공개 가능)
+# - 클러스터 이름: my-first-eks-cluster (예시)
+#
+# ===================================
