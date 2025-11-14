@@ -125,8 +125,8 @@ AI: "my-first-eks-cluster가 ACTIVE 상태입니다. 노드 2개 Running..."
 5. 키 정보 저장 (한 번만 표시!)
 
 ```
-액세스 키 ID: AKIAIOSFODNN7EXAMPLE
-보안 액세스 키: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+액세스 키 ID: 
+보안 액세스 키: 
 ```
 
 ⚠️ **중요**: Secret Key는 다시 볼 수 없습니다!
@@ -153,8 +153,8 @@ aws configure
 #### 입력 정보
 
 ```bash
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
 Default region name [None]: ap-northeast-2
 Default output format [None]: json
 ```
@@ -167,8 +167,8 @@ aws sts get-caller-identity
 
 # 출력:
 # {
-#     "UserId": "AIDAI...",
-#     "Account": "123456789012",
+#     "UserId": "...",
+#     "Account": "...",
 #     "Arn": "arn:aws:iam::123456789012:user/my-user"
 # }
 ```
